@@ -14,3 +14,5 @@ open 'http://localhost:3000/'
 - improve styles
 - check tocken expiration/validation
 - validate input data
+- use Susspenze/Lazy load
+- use Error boundary wrapper

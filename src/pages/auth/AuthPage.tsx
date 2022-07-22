@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useAuth } from '../../routes/useAuth';
 import { Storage } from '../../shared/storage';
 import { authService } from './authService';

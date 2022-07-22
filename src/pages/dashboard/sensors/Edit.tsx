@@ -10,12 +10,12 @@ interface ParamTypes {
 
 export function Edit() {
   const { id } = useParams<ParamTypes>();
-
   const [state, setState] = useState({} as SensorItemContract);
 
   const initialTableData = () => sensorService().getById(id).then((res: SensorItemContract) => {
     setState(res);
   });
+  const title = id ? 'Create' : `Edit - id ${id}`;
 
   useEffect(() => {
     if (id) {
@@ -26,10 +26,7 @@ export function Edit() {
   console.log('Edit');
   return (
     <div>
-      Edit -
-      {' '}
-      {id}
-
+      <h3>{title}</h3>
       <FormSensor formData={state} />
     </div>
   );

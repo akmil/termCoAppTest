@@ -24,10 +24,12 @@ const FormSensor = ({ formData }: Props) => {
   const saveForm = () => {
     if (state.id) {
       sensorService().updateById(state).then((res: SensorItemContract) => {
+        // TODO: check if res is valid
         history.push('/');
       });
     } else {
       sensorService().create(state).then((res: SensorItemContract) => {
+        // TODO: check if res is valid
         history.push('/');
       });
     }
@@ -47,7 +49,6 @@ const FormSensor = ({ formData }: Props) => {
   };
 
   useEffect(() => {
-    console.log('fd:', formData);
     setState(formData);
   }, [formData]);
 

@@ -7,9 +7,7 @@ function Table({ data, initialTableData }:
   {data: SensorItemContract[], initialTableData: () => void}) {
   const handleDelete = (id: string) => {
     if (window.confirm('Are you sure you wish to delete this item?')) {
-      console.log('id', id);
       sensorService().deleteById(id).then((res: SensorItemContract[]) => {
-        // setState(res);
         initialTableData();
       });
     }
@@ -37,7 +35,7 @@ function Table({ data, initialTableData }:
               <th scope="row">{item.id}</th>
               <td>{item.description}</td>
               <td>{item.samplingPeriod}</td>
-              <td>{item.isActive}</td>
+              <td>{item.isActive ? 'yes' : 'no'}</td>
               <td>
                 <Link to={`/edit/${item.id}`}>
                   <button type="button" className="btn btn-primary btn-sm">Edit</button>
