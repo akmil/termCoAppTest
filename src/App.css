@@ -1,0 +1,32 @@
+#root {
+  background: cadetblue;
+  min-height: 100vh;
+  text-align: center;
+}
+.menu {
+  text-align: center;
+}
+.app {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.boarder {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.cell button {
+  font-size: 32px;
+  line-height: 1;
+  width: 32px;
+  border: 0;
+  font-weight: 900;
+  background: 0;
+}
+.cell button:hover {
+  color: coral;
+  cursor: pointer;
+}

@@ -1,0 +1,15 @@
+node_modules/*
+
+# Ignore markdown files and examples
+build-tools/*
+webpack.config.js
+webpack.config-helper.js
+
+# Ignore files
+assets/*
+
+# Ignore built files
+_dist/*
+
+# Ignore styles
+scss/*
